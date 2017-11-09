@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    body {
+        background-color: aliceblue;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    form {
+        font-size: 16px;
+    }
+</style>
+
+<h2>Aladdin Characters</h2>
+
+<form action="ChoosePic" method="post">
+    Pick a picture:<br />
+    <input type="radio" name="picChoice" value="Genie" /> Genie <br />
+    <input type="radio" name="picChoice" value="Abu" />   Abu <br />
+    <input type="radio" name="picChoice" value="Rajah" /> Rajah <br />
+
+    How many times would you like that to print? <input type="number" min="1" name="timesPrinted" /><br />
+    <input type="submit" name="submit" />
+</form>

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    body{
+        background-color: aliceblue;
+    }
+    table, th, td {
+        border: 2px double black;
+        padding: 8px;
+    }
+</style>
+
+<h2>In-Store Products</h2>
+
+<table>
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Unit Price</th>
+        <th>Supplier ID</th>
+        <th>Category ID</th>
+    </tr>
+    @foreach (var products in ViewBag.aListOfProducts)
+    {
+        <tr>
+            <th>@products.ProductId</th>
+            <th>@products.Name</th>
+            <th>@products.UnitPrice</th>
+            <th>@products.SupplierId</th>
+            <th>@products.CategoryId</th>
+        </tr>
+    }
+</table>
